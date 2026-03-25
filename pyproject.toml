@@ -32,6 +32,7 @@ dependencies = [
     "fb_logging",
     "fb_tools",
     "requests",
+    "urllib3",
 ]
 
 [project.urls]
