@@ -48,7 +48,7 @@ directory = "data"
 
 [project.scripts]
 myip = "fb_ddns.myip:main"
-# update-ddns = "fb_ddns.update_ddns:main"
+update-ddns = "fb_ddns.update_ddns:main"
 
 [project.optional-dependencies]
 development = [
