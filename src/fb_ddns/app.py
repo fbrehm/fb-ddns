@@ -500,7 +500,7 @@ class BaseDdnsApplication(FbConfigApplication):
                 LOG.debug(_("File {!r} not found.").format(cache_file))
             return None
 
-        LOG.debug(_("Reading IP address from {!r}...").format(str(cache_file)))
+        LOG.debug(_("Reading IP address from {!r} ...").format(str(cache_file)))
         has_errors = False
         try:
             cont = self.read_file(str(cache_file), quiet=True)
