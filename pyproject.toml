@@ -29,9 +29,11 @@ readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
     "babel",
+    "dnspython",
     "fb_logging",
     "fb_tools",
     "requests",
+    "six",
     "urllib3",
 ]
 
@@ -41,11 +43,11 @@ Source = "https://github.com/fbrehm/fb-ddns"
 [tool.flit.module]
 name = "fb_ddns"
 
-# [tool.flit.external-data]
-# directory = "data"
+[tool.flit.external-data]
+directory = "data"
 
-# [project.scripts]
-# myip = "fb_ddns.myip:main"
+[project.scripts]
+myip = "fb_ddns.myip:main"
 # update-ddns = "fb_ddns.update_ddns:main"
 
 [project.optional-dependencies]

@@ -1,0 +1,460 @@
+# German translations for fb_ddns.
+# Copyright (C) 2026 Frank Brehm, Berlin
+# This file is distributed under the same license as the fb_ddns project.
+# Frank Brehm <frank@brehm-online.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fb_ddns 0.1.0\n"
+"Report-Msgid-Bugs-To: frank@brehm-online.com\n"
+"POT-Creation-Date: 2026-03-25 14:27+0100\n"
+"PO-Revision-Date: 2026-03-25 14:27+0100\n"
+"Last-Translator: FULL NAME <frank@brehm-online.com>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: src/fb_ddns/app.py:92
+msgid "This is a base DDNS related application."
+msgstr ""
+
+#: src/fb_ddns/app.py:123
+msgid "Invalid user agent {!r} given."
+msgstr ""
+
+#: src/fb_ddns/app.py:166
+msgid "DDNS options"
+msgstr ""
+
+#: src/fb_ddns/app.py:177 src/fb_ddns/app.py:180
+msgid "Perform action only for {}."
+msgstr ""
+
+#: src/fb_ddns/app.py:183
+msgid "The IP protocol, for which the action should be performed (one of {c}, default {d!r})."
+msgstr ""
+
+#: src/fb_ddns/app.py:208
+msgid "PROTOCOL"
+msgstr ""
+
+#: src/fb_ddns/app.py:218
+msgid "DIRECTORY"
+msgstr ""
+
+#: src/fb_ddns/app.py:222
+msgid ""
+"The directory, where to read and write the cache files of the evaluated IP addresses (default: "
+"{!r})."
+msgstr ""
+
+#: src/fb_ddns/app.py:233
+msgid "SECONDS"
+msgstr ""
+
+#: src/fb_ddns/app.py:234
+msgid "The timeout in seconds for Web requests (default: {})."
+msgstr ""
+
+#: src/fb_ddns/app.py:244
+msgid ""
+"By default, every secure connection {app} makes is verified to be secure before the request "
+"takes place. This option makes {app} skip the verification step and proceed without checking."
+msgstr ""
+
+#: src/fb_ddns/app.py:283 src/fb_ddns/config.py:268
+msgid "Invalid value {!r} as timeout:"
+msgstr ""
+
+#: src/fb_ddns/app.py:294
+msgid "Setting Loglevel of the {m} module to {ll}."
+msgstr ""
+
+#: src/fb_ddns/app.py:309
+msgid "Trying to get my public IPv{} address."
+msgstr ""
+
+#: src/fb_ddns/app.py:321
+msgid "Got a response:"
+msgstr ""
+
+#: src/fb_ddns/app.py:343
+msgid "Request method: {!r}"
+msgstr ""
+
+#: src/fb_ddns/app.py:363
+msgid "Simulation mode, Request will not be sent."
+msgstr ""
+
+#: src/fb_ddns/app.py:380
+msgid "Got a {c} on requesting {u!r}: {e}."
+msgstr ""
+
+#: src/fb_ddns/app.py:388
+msgid "Failed to parse the response"
+msgstr ""
+
+#: src/fb_ddns/app.py:406
+msgid "Text response:"
+msgstr ""
+
+#: src/fb_ddns/app.py:416
+msgid "Setting encoding of response to {!r}."
+msgstr ""
+
+#: src/fb_ddns/app.py:442
+msgid "Checking existence and accessibility of working directory {!r} ..."
+msgstr ""
+
+#: src/fb_ddns/app.py:454
+msgid "No read access"
+msgstr ""
+
+#: src/fb_ddns/app.py:457
+msgid "No write access"
+msgstr ""
+
+#: src/fb_ddns/app.py:473
+msgid "Writing IP address {a!r} into {f!r} ..."
+msgstr ""
+
+#: src/fb_ddns/app.py:500
+msgid "File {!r} not found."
+msgstr ""
+
+#: src/fb_ddns/app.py:503
+msgid "Reading IP address from {!r}..."
+msgstr ""
+
+#: src/fb_ddns/app.py:524
+msgid "Line {li!r} in {f!r} is not a valid IP address:"
+msgstr ""
+
+#: src/fb_ddns/app.py:554 src/fb_ddns/app.py:596 src/fb_ddns/app.py:630
+msgid "Using resolver:"
+msgstr ""
+
+#: src/fb_ddns/app.py:565 src/fb_ddns/app.py:577
+msgid "Did not found a {t} address for {n}:"
+msgstr ""
+
+#: src/fb_ddns/app.py:586 src/fb_ddns/app.py:620
+msgid "Cannot execute {method}() - module {mod!r} could not imported."
+msgstr ""
+
+#: src/fb_ddns/app.py:611 src/fb_ddns/app.py:642
+msgid "Did not found a {t} entry for zone {z}:"
+msgstr ""
+
+#: src/fb_ddns/config.py:153
+msgid ""
+"Invalid timeout {to!r} for Web requests, it must be greater than {min} and less than {max} "
+"seconds."
+msgstr ""
+
+#: src/fb_ddns/config.py:291
+msgid "Invalid value {u!r} for protocols to update in section {s!r}, valid protocols are: "
+msgstr ""
+
+#: src/fb_ddns/config.py:310
+msgid "Invalid forced update interval in section {!r}:"
+msgstr ""
+
+#: src/fb_ddns/config.py:317 src/fb_ddns/config.py:360
+msgid "Unknown configuration option {o!r} with value {v!r} in section {s!r}."
+msgstr ""
+
+#: src/fb_ddns/config.py:340
+msgid "The path to the working directory must be an absolute path (given: {!r})."
+msgstr ""
+
+#: src/fb_ddns/config.py:353
+msgid "The path to the logfile must be an absolute path (given: {!r})."
+msgstr ""
+
+#: src/fb_ddns/errors.py:54
+msgid "Got an error {c} on requesting {u!r}: {m}"
+msgstr ""
+
+#: src/fb_ddns/errors.py:67
+msgid "There is a problem with the update status file {!r}"
+msgstr ""
+
+#: src/fb_ddns/errors.py:82
+msgid "There is a problem with the working directory {!r}"
+msgstr ""
+
+#: src/fb_ddns/errors.py:97
+msgid "Working directory {!r} does not exists"
+msgstr ""
+
+#: src/fb_ddns/errors.py:112
+msgid "Path {!r} is not a directory"
+msgstr ""
+
+#: src/fb_ddns/errors.py:127
+msgid "Invalid permissions for working directory {!r}"
+msgstr ""
+
+#: src/fb_ddns/myip.py:54
+msgid ""
+"Tries to detect the public NAT IPv4 address and/or the automatic assigned IPv6 address in a "
+"local network and print it out."
+msgstr ""
+
+#: src/fb_ddns/myip.py:60 src/fb_ddns/myip.py:61
+msgid "Use only {} to retreive the public IP address."
+msgstr ""
+
+#: src/fb_ddns/myip.py:62
+msgid "The IP protocol, for which the public IP should be retrieved (one of {c}, default {d!r})."
+msgstr ""
+
+#: src/fb_ddns/myip.py:106
+msgid "myip options"
+msgstr ""
+
+#: src/fb_ddns/myip.py:114
+msgid "Write found public IPs into a cache file in working directory."
+msgstr ""
+
+#: src/fb_ddns/myip.py:147 src/fb_ddns/update_ddns.py:490
+msgid "Starting {a!r}, version {v!r} ..."
+msgstr ""
+
+#: src/fb_ddns/myip.py:179 src/fb_ddns/update_ddns.py:848
+msgid ""
+"{c}-Object:\n"
+"{a}"
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:96
+msgid "No valid domain given on initialization of a {} object."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:127
+msgid "Invalid domain {!r} given, whitespaces are not allowed."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:177
+msgid "A timestamp must not be None."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:250
+msgid "Checking working directory {d!r} for updating {what} ..."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:256
+msgid "working directory is not a path object."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:265
+msgid "working directory is not readable."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:269
+msgid "working directory is not writeable."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:275
+msgid "Checking update status file {!r} ..."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:280
+msgid "Update status file {!r} does not exists."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:287
+msgid "update status file is not readable."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:291
+msgid "update status file is not writeable."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:296
+msgid "Write status into {!r} ..."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:312
+msgid "Data to write in status file:"
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:315
+msgid "Simulation mode, file {!r} will not be written."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:334
+msgid "Read status from {!r} ..."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:342
+msgid "Read data from YAML:"
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:354
+msgid "no timestamp of last update found."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:383
+msgid "Updating the DDNS records, even if seems not to be changed."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:386
+msgid "Tries to update the A and/or AAAA record at ddns.de with the current IP address."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:392 src/fb_ddns/update_ddns.py:393
+msgid "Update only the {} record with the public IP address."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:394
+msgid ""
+"The IP protocol, for which the appropriate DNS record should be updated with the public IP (one "
+"of {c}, default {d!r})."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:412
+msgid "Update DDNS options"
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:417
+msgid "USER"
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:419
+msgid "The username to login at ddns.de."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:425
+msgid "PASSWORD"
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:427
+msgid "The password of the user to login at ddns.de."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:438
+msgid "Update all domains, which are connected whith the given ddns account."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:445
+msgid "DOMAIN"
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:447
+msgid "The particular domain(s), which should be updated (if not all)."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:502
+msgid "Ending {a!r}."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:508
+msgid "Actions before running."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:511
+msgid "No domains to update given, but the option all domains is deactivated."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:531 src/fb_ddns/update_ddns.py:548
+msgid "Found current {t} address {a}."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:533 src/fb_ddns/update_ddns.py:550
+msgid "Address {a!r} seems not to be a valid {w} address: {e}"
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:538 src/fb_ddns/update_ddns.py:555
+msgid "Got no public {} address."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:564
+msgid "Currently configured dynamic addresses:"
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:580
+msgid "Did not found update status file {!r}."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:587
+msgid "{c} - could not evaluate update status file {f!r}: {e}"
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:594
+msgid "Last update was at {dt} with status {st!r}."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:630
+msgid "Last update of domain {dom!r} is {delta} ago."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:643
+msgid "Checking the need for updating the given domain {!r}."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:650
+msgid "Updating the DDNS records of domain {!r}, although if they seems not to be changed."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:656
+msgid "Update of domain {!r} is not necessary."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:659
+msgid "Updating the DDNS records of domain {!r}."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:701
+msgid "Simulation mode, update of domain {!r} will not be sended."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:717 src/fb_ddns/update_ddns.py:814
+msgid "No response from {}."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:719 src/fb_ddns/update_ddns.py:816
+msgid "Response from {}:"
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:721 src/fb_ddns/update_ddns.py:818
+msgid "Status code: {c}, status text: {r!r}."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:757
+msgid "Update all domains at {} with found dynamic external addresses ..."
+msgstr ""
+
+#: src/fb_ddns/update_ddns.py:799
+msgid "Simulation mode, update of all domains will not be sended."
+msgstr ""
+
+#: src/fb_ddns/xlate.py:116
+msgid "Module directory:"
+msgstr ""
+
+#: src/fb_ddns/xlate.py:117
+msgid "Lib directory:"
+msgstr ""
+
+#: src/fb_ddns/xlate.py:118
+msgid "Base directory:"
+msgstr ""
+
+#: src/fb_ddns/xlate.py:119
+msgid "Locale directory:"
+msgstr ""
+
+#: src/fb_ddns/xlate.py:120
+msgid "Locale domain:"
+msgstr ""
+
+#: src/fb_ddns/xlate.py:121
+msgid "Found .mo-file:"
+msgstr ""
+
