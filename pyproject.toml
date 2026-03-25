@@ -41,8 +41,8 @@ Source = "https://github.com/fbrehm/fb-ddns"
 [tool.flit.module]
 name = "fb_ddns"
 
-[tool.flit.external-data]
-directory = "data"
+# [tool.flit.external-data]
+# directory = "data"
 
 # [project.scripts]
 # myip = "fb_ddns.myip:main"
