@@ -1,0 +1,8 @@
+*.debhelper
+*.log
+*.substvars
+files
+fb-ddns
+python-fb-ddns
+python3-fb-ddns
+
