@@ -13,6 +13,6 @@ from __future__ import absolute_import
 DDNS_CFG_BASENAME = "ddns.ini"
 MAX_TIMEOUT = 3600
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 # vim: ts=4 et list
