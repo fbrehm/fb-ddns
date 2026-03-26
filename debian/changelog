@@ -1,3 +1,11 @@
+fb-ddns (0.2.0) all; urgency=medium
+
+  * Adding scripts and Python modules, which were former located in
+    package fb-tools.
+  * Adding different build environments - see CHANGELOG.md.
+
+ -- Frank Brehm <frank.brehm@pixelpark.com>  Thu, 26 Mar 2026 07:12:58 +0100
+
 fb-ddns (0.1.0) all; urgency=medium
 
   * Initial release.
