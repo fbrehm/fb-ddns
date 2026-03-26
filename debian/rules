@@ -12,5 +12,6 @@ override_dh_auto_install:
 	dh_auto_install
 	mkdir -pv debian/fb-ddns/usr
 	mv -v ${PYBUILD_DESTDIR_python3}/usr/bin debian/fb-ddns/usr
+	if test -d ${PYBUILD_DESTDIR_python3}/usr/share/man ; then mkdir -pv debian/fb-ddns/usr/share; mv -v ${PYBUILD_DESTDIR_python3}/usr/share/man debian/fb-ddns/usr/share; fi
 
 # vim: ts=8 list

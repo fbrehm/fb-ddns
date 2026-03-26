@@ -1,3 +1,9 @@
+fb-ddns (0.2.1) all; urgency=medium
+
+  * Moving installation of script manpages into Debian package fb-ddns.
+
+ -- Frank Brehm <frank.brehm@pixelpark.com>  Thu, 26 Mar 2026 15:49:00 +0100
+
 fb-ddns (0.2.0) all; urgency=medium
 
   * Adding scripts and Python modules, which were former located in
