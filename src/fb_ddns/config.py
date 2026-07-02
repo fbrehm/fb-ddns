@@ -28,7 +28,7 @@ from fb_tools.multi_config import BaseMultiConfig
 # Own modules
 from .xlate import XLATOR, format_list
 
-__version__ = "3.4.0"
+__version__ = "3.4.1"
 
 LOG = logging.getLogger(__name__)
 
@@ -105,12 +105,6 @@ class DdnsConfiguration(BaseMultiConfig):
         self.working_dir = self.default_working_dir
 
         self.logdir = self.default_logdir
-        if self.default_logfile:
-            lf = Path(self.default_logfile)
-            if lf.is_absolute():
-                self.logfile = lf
-            else:
-                self.logfile = self.logdir / lf
 
         self.ddns_user = None
         self.ddns_pwd = None
@@ -146,6 +140,13 @@ class DdnsConfiguration(BaseMultiConfig):
             ensure_privacy=False,
             initialized=False,
         )
+
+        if self.default_logfile:
+            lf = Path(self.default_logfile)
+            if lf.is_absolute():
+                self.logfile = lf
+            else:
+                self.logfile = self.logdir / lf
 
         if initialized:
             self.initialized = True
