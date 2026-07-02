@@ -14,6 +14,7 @@ from __future__ import absolute_import
 import datetime
 import logging
 import re
+import os
 from pathlib import Path
 
 # Third party modules
@@ -27,7 +28,7 @@ from fb_tools.multi_config import BaseMultiConfig
 # Own modules
 from .xlate import XLATOR, format_list
 
-__version__ = "3.3.0"
+__version__ = "3.4.0"
 
 LOG = logging.getLogger(__name__)
 
@@ -38,8 +39,8 @@ _ = XLATOR.gettext
 class DdnsConfiguration(BaseMultiConfig):
     """A configuration class for DDNS application classes."""
 
-    default_working_dir = Path("/var/lib/ddns")
-    default_logfile = Path("/var/log/ddns/ddnss-update.log")
+    default_working_dir = None
+    default_logdir = None
 
     default_get_ipv4_url = "https://ip4.ddnss.de/jsonip.php"
     default_get_ipv6_url = "https://ip6.ddnss.de/jsonip.php"
@@ -98,8 +99,19 @@ class DdnsConfiguration(BaseMultiConfig):
         if "ddns" not in add_stems:
             add_stems.append("ddns")
 
+        self.init_default_logdir()
+        self.init_default_working_dir()
+
         self.working_dir = self.default_working_dir
-        self.logfile = self.default_logfile
+
+        self.logdir = self.default_logdir
+        if self.default_logfile:
+            lf = Path(self.default_logfile)
+            if lf.is_absolute():
+                self.logfile = lf
+            else:
+                self.logfile = self.logdir / lf
+
         self.ddns_user = None
         self.ddns_pwd = None
         self.domains = []
@@ -207,6 +219,48 @@ class DdnsConfiguration(BaseMultiConfig):
         res["valid_protocols"] = self.valid_protocols
 
         return res
+
+    # -------------------------------------------------------------------------
+    @classmethod
+    def init_default_working_dir(cls):
+        """Evaluate the default working directory."""
+        my_uid = os.geteuid()
+
+        xdg = os.environ.get("XDG_DATA_HOME", None)
+        xdg_local = xdg or Path('~/.local/share').expanduser()
+
+        # Init as non-root user
+        if my_uid:
+            cls.default_working_dir = Path(xdg_local, 'fb-ddns')
+            return
+
+        # Init as  root user
+        if xdg:
+            cls.default_working_dir = Path(xdg, 'fb-ddns')
+            return
+
+        cls.default_working_dir = Path('/var/lib/ddns')
+
+    # -------------------------------------------------------------------------
+    @classmethod
+    def init_default_logdir(cls):
+        """Evaluate the default logging directory."""
+        my_uid = os.geteuid()
+
+        xdg = os.environ.get("XDG_STATE_HOME", None)
+        xdg_local = xdg or Path('~/.local/state').expanduser()
+
+        # Init as non-root user
+        if my_uid:
+            cls.default_logdir = Path(xdg_local, 'fb-ddns')
+            return
+
+        # Init as  root user
+        if xdg:
+            cls.default_logdir = Path(xdg, 'fb-ddns')
+            return
+
+        cls.default_logdir = Path('/var/log/ddns')
 
     # -------------------------------------------------------------------------
     def eval_section(self, section_name):
@@ -349,11 +403,9 @@ class DdnsConfiguration(BaseMultiConfig):
                 if p.is_absolute():
                     self.logfile = p
                 else:
-                    LOG.error(
-                        _(
-                            "The path to the logfile must be an absolute path " "(given: {!r})."
-                        ).format(value)
-                    )
+                    self.logfile = self.logdir / p
+                if self.verbose > 1:
+                    LOG.debug("Logfile is now: {!r}".format(str(self.logfile)))
                 continue
 
             LOG.warning(

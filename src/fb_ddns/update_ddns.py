@@ -47,7 +47,7 @@ from .errors import DdnsAppError
 from .errors import InvalidUpdateStatusFileError
 from .xlate import XLATOR, format_list
 
-__version__ = "2.6.0"
+__version__ = "2.6.1"
 LOG = logging.getLogger(__name__)
 
 _ = XLATOR.gettext
@@ -380,6 +380,8 @@ class UpdateDdnsApplication(BaseDdnsApplication):
         self.cur_resolved_addresses = {}
         self.forced_update_interval = DdnsConfiguration.default_forced_update_interval
         self.last_update_timestamp = None
+
+        DdnsConfiguration.default_logfile = "update.log"
 
         self._force_desc_msg = _("Updating the DDNS records, even if seems not to be changed.")
 
