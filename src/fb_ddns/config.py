@@ -13,8 +13,8 @@ from __future__ import absolute_import
 # Standard module
 import datetime
 import logging
-import re
 import os
+import re
 from pathlib import Path
 
 # Third party modules
@@ -28,7 +28,7 @@ from fb_tools.multi_config import BaseMultiConfig
 # Own modules
 from .xlate import XLATOR, format_list
 
-__version__ = "3.4.1"
+__version__ = "3.4.2"
 
 LOG = logging.getLogger(__name__)
 
