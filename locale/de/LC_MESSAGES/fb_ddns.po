@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: fb_ddns 0.1.0\n"
+"Project-Id-Version: fb_ddns 0.2.1\n"
 "Report-Msgid-Bugs-To: frank@brehm-online.com\n"
-"POT-Creation-Date: 2026-03-25 15:20+0100\n"
+"POT-Creation-Date: 2026-07-31 16:03+0200\n"
 "PO-Revision-Date: 2026-03-25 14:27+0100\n"
 "Last-Translator: FULL NAME <frank@brehm-online.com>\n"
 "Language: de\n"
@@ -76,7 +76,7 @@ msgstr ""
 "Normalerweise wird von {app} jede sichere Verbindung vor der Abfrage überprüft, ob sie wirklich "
 "sicher ist. Diese Option veranlaßt {app}, diese Überprüfung zu überspringen und weiterzufahren."
 
-#: src/fb_ddns/app.py:283 src/fb_ddns/config.py:268
+#: src/fb_ddns/app.py:283 src/fb_ddns/config.py:323
 #, python-brace-format
 msgid "Invalid value {!r} as timeout:"
 msgstr "Ungültiger Wert {!r} für die Zeit der Zeitüberschreitung:"
@@ -174,7 +174,7 @@ msgstr "Kann Methode {method]() nicht ausführen - das Modul {mod!r} konnte nich
 msgid "Did not found a {t} entry for zone {z}:"
 msgstr "Fand keinen {t}-Eintrag für Zone {z}:"
 
-#: src/fb_ddns/config.py:154
+#: src/fb_ddns/config.py:167
 #, python-brace-format
 msgid ""
 "Invalid timeout {to!r} for Web requests, it must be greater than {min} and less than {max} "
@@ -183,32 +183,27 @@ msgstr ""
 "Ungültige Zeit {to!r} für eine Zeitüberschreitung für aine Webabfrage, sie muss zwischen {min} "
 "und {max} Sekunden liegen."
 
-#: src/fb_ddns/config.py:292
+#: src/fb_ddns/config.py:347
 #, python-brace-format
 msgid "Invalid value {u!r} for protocols to update in section {s!r}, valid protocols are: "
 msgstr ""
 "Ungültiger Wert {u!r} für Protokolle zum Update in Abschnitt {s!r} angegeben, gültige Protokolle"
 " sind:"
 
-#: src/fb_ddns/config.py:310
+#: src/fb_ddns/config.py:365
 #, python-brace-format
 msgid "Invalid forced update interval in section {!r}:"
 msgstr "Ungültiges Intervall für forcierte Updates in Abschnitt {s!r} angegeben:"
 
-#: src/fb_ddns/config.py:317 src/fb_ddns/config.py:361
+#: src/fb_ddns/config.py:372 src/fb_ddns/config.py:414
 #, python-brace-format
 msgid "Unknown configuration option {o!r} with value {v!r} in section {s!r}."
 msgstr "Unbekannte Konfigurationsoption {o!r} mit dem Wert {v!r} in Abschnitt {s!r}."
 
-#: src/fb_ddns/config.py:341
+#: src/fb_ddns/config.py:396
 #, python-brace-format
 msgid "The path to the working directory must be an absolute path (given: {!r})."
 msgstr "Der Pfad zum Arbeitsverzeichnis muss ein absoluter Pfad sein (gegeben: {!r})."
-
-#: src/fb_ddns/config.py:354
-#, python-brace-format
-msgid "The path to the logfile must be an absolute path (given: {!r})."
-msgstr "Der Pfad zur Logdatei muss absolut sein (gegeben: {!r})."
 
 #: src/fb_ddns/errors.py:54
 #, python-brace-format
@@ -268,12 +263,12 @@ msgstr "Optionen für myip"
 msgid "Write found public IPs into a cache file in working directory."
 msgstr "Schreibe die gefundenen öffentliche IP-Adressen in eine Cache-Datei im Arbeitsverzeichnis zurück."
 
-#: src/fb_ddns/myip.py:147 src/fb_ddns/update_ddns.py:491
+#: src/fb_ddns/myip.py:147 src/fb_ddns/update_ddns.py:493
 #, python-brace-format
 msgid "Starting {a!r}, version {v!r} ..."
 msgstr "Starte {a!r}, Version {v!r} …"
 
-#: src/fb_ddns/myip.py:179 src/fb_ddns/update_ddns.py:849
+#: src/fb_ddns/myip.py:179 src/fb_ddns/update_ddns.py:851
 #, python-brace-format
 msgid ""
 "{c}-Object:\n"
@@ -358,20 +353,20 @@ msgstr "Gelesene Daten aus YAML:"
 msgid "no timestamp of last update found."
 msgstr "ein Zeitstempel der letzten Aktualisierung gefunden."
 
-#: src/fb_ddns/update_ddns.py:384
+#: src/fb_ddns/update_ddns.py:386
 msgid "Updating the DDNS records, even if seems not to be changed."
 msgstr "Aktualisieren der DDNS-Einträge, auch wenn sie nicht verändert zu sein scheinen."
 
-#: src/fb_ddns/update_ddns.py:388
+#: src/fb_ddns/update_ddns.py:390
 msgid "Tries to update the A and/or AAAA record at ddns.de with the current IP address."
 msgstr "Versucht den A- bzw. AAAA-Eintrag bei ddns.de mit der aktuellen IP-Adresse zu aktualisieren."
 
-#: src/fb_ddns/update_ddns.py:393 src/fb_ddns/update_ddns.py:394
+#: src/fb_ddns/update_ddns.py:395 src/fb_ddns/update_ddns.py:396
 #, python-brace-format
 msgid "Update only the {} record with the public IP address."
 msgstr "Aktualisiere nur den {}-Eintrag mit der aktuellen IP-Adresse."
 
-#: src/fb_ddns/update_ddns.py:396
+#: src/fb_ddns/update_ddns.py:398
 #, python-brace-format
 msgid ""
 "The IP protocol, for which the appropriate DNS record should be updated with the public IP (one "
@@ -380,138 +375,138 @@ msgstr ""
 "Das IP-Protokoll, für welches der entsprechende DNS-Eintrag der üffentlichen IP aktualisiert "
 "werden soll (eins aus {c}, Vorgabe {d!r})."
 
-#: src/fb_ddns/update_ddns.py:413
+#: src/fb_ddns/update_ddns.py:415
 msgid "Update DDNS options"
 msgstr "DDNS-Aktualisierungsoptionen"
 
-#: src/fb_ddns/update_ddns.py:418
+#: src/fb_ddns/update_ddns.py:420
 msgid "USER"
 msgstr "BENUTZER"
 
-#: src/fb_ddns/update_ddns.py:420
+#: src/fb_ddns/update_ddns.py:422
 msgid "The username to login at ddns.de."
 msgstr "Der Nutzername, um sich bei ddns.de eizuloggen."
 
-#: src/fb_ddns/update_ddns.py:426
+#: src/fb_ddns/update_ddns.py:428
 msgid "PASSWORD"
 msgstr "PASSWORT"
 
-#: src/fb_ddns/update_ddns.py:428
+#: src/fb_ddns/update_ddns.py:430
 msgid "The password of the user to login at ddns.de."
 msgstr "Das Login-Passwort des Nutzers bei ddns.de."
 
-#: src/fb_ddns/update_ddns.py:439
+#: src/fb_ddns/update_ddns.py:441
 msgid "Update all domains, which are connected whith the given ddns account."
 msgstr "Aktualisirung alle Domänen, die mit dem gegebenen DDNS-Konto verbunden sind."
 
-#: src/fb_ddns/update_ddns.py:446
+#: src/fb_ddns/update_ddns.py:448
 msgid "DOMAIN"
 msgstr "DOMÄNE"
 
-#: src/fb_ddns/update_ddns.py:448
+#: src/fb_ddns/update_ddns.py:450
 msgid "The particular domain(s), which should be updated (if not all)."
 msgstr ""
 "Die einzelnen Domäne(n), die aktualisiert werden sollen (wenn nicht alle aktualisiert werden "
 "sollen)."
 
-#: src/fb_ddns/update_ddns.py:503
+#: src/fb_ddns/update_ddns.py:505
 #, python-brace-format
 msgid "Ending {a!r}."
 msgstr "Beende {a!r}."
 
-#: src/fb_ddns/update_ddns.py:509
+#: src/fb_ddns/update_ddns.py:511
 msgid "Actions before running."
 msgstr "Aktionen vor Beginn."
 
-#: src/fb_ddns/update_ddns.py:512
+#: src/fb_ddns/update_ddns.py:514
 msgid "No domains to update given, but the option all domains is deactivated."
 msgstr "Keine Domänen zur Aktualisierungg angegeben, aber die Option »für alle Domänen« ist deaktiviert."
 
-#: src/fb_ddns/update_ddns.py:532 src/fb_ddns/update_ddns.py:549
+#: src/fb_ddns/update_ddns.py:534 src/fb_ddns/update_ddns.py:551
 #, python-brace-format
 msgid "Found current {t} address {a}."
 msgstr "Fand aktuell {t}-Adresse {a}."
 
-#: src/fb_ddns/update_ddns.py:534 src/fb_ddns/update_ddns.py:551
+#: src/fb_ddns/update_ddns.py:536 src/fb_ddns/update_ddns.py:553
 #, python-brace-format
 msgid "Address {a!r} seems not to be a valid {w} address: {e}"
 msgstr "Die Adresse {a!r} scheint keine gültige {w}-Adresse zu sein: {e}"
 
-#: src/fb_ddns/update_ddns.py:539 src/fb_ddns/update_ddns.py:556
+#: src/fb_ddns/update_ddns.py:541 src/fb_ddns/update_ddns.py:558
 #, python-brace-format
 msgid "Got no public {} address."
 msgstr "Keine öffentliche {}-Adresse gefunden."
 
-#: src/fb_ddns/update_ddns.py:565
+#: src/fb_ddns/update_ddns.py:567
 msgid "Currently configured dynamic addresses:"
 msgstr "Aktuell konfigurierte dynamische Adressen:"
 
-#: src/fb_ddns/update_ddns.py:581
+#: src/fb_ddns/update_ddns.py:583
 #, python-brace-format
 msgid "Did not found update status file {!r}."
 msgstr "Aktualisierungs-Statusdatei {!r} nicht gefunden."
 
-#: src/fb_ddns/update_ddns.py:588
+#: src/fb_ddns/update_ddns.py:590
 #, python-brace-format
 msgid "{c} - could not evaluate update status file {f!r}: {e}"
 msgstr "{c} - konnte Aktualisierungs-Statusdatei {f!r} nicht auswerten: {e}"
 
-#: src/fb_ddns/update_ddns.py:595
+#: src/fb_ddns/update_ddns.py:597
 #, python-brace-format
 msgid "Last update was at {dt} with status {st!r}."
 msgstr "Die letzte Aktualisierung war {dt}  mit dem Status {st!r}."
 
-#: src/fb_ddns/update_ddns.py:631
+#: src/fb_ddns/update_ddns.py:633
 #, python-brace-format
 msgid "Last update of domain {dom!r} is {delta} ago."
 msgstr "Die letzte Aktualisierung der Domäne {dom!r} war vor {delta}."
 
-#: src/fb_ddns/update_ddns.py:644
+#: src/fb_ddns/update_ddns.py:646
 #, python-brace-format
 msgid "Checking the need for updating the given domain {!r}."
 msgstr "Überprüfe Notwendigkeit zum Aktualisieren der angegebenen Domäne {!r}."
 
-#: src/fb_ddns/update_ddns.py:652
+#: src/fb_ddns/update_ddns.py:654
 #, python-brace-format
 msgid "Updating the DDNS records of domain {!r}, although if they seems not to be changed."
 msgstr "Aktualisieren der DDNS-Einträge der Domäne {!r}, auch wenn sie nicht verändert zu sein scheinen."
 
-#: src/fb_ddns/update_ddns.py:657
+#: src/fb_ddns/update_ddns.py:659
 #, python-brace-format
 msgid "Update of domain {!r} is not necessary."
 msgstr "Die Aktualisierung der Domäne {!r} ist nicht notwendig."
 
-#: src/fb_ddns/update_ddns.py:660
+#: src/fb_ddns/update_ddns.py:662
 #, python-brace-format
 msgid "Updating the DDNS records of domain {!r}."
 msgstr "Aktualisiere DDNS-Einträge der Domäne {!r}."
 
-#: src/fb_ddns/update_ddns.py:702
+#: src/fb_ddns/update_ddns.py:704
 #, python-brace-format
 msgid "Simulation mode, update of domain {!r} will not be sended."
 msgstr "Simulationsmodus, die Aktualisierung der Domäne {!r} wird nicht gesendet."
 
-#: src/fb_ddns/update_ddns.py:718 src/fb_ddns/update_ddns.py:815
+#: src/fb_ddns/update_ddns.py:720 src/fb_ddns/update_ddns.py:817
 #, python-brace-format
 msgid "No response from {}."
 msgstr "Keine Antwort von {}."
 
-#: src/fb_ddns/update_ddns.py:720 src/fb_ddns/update_ddns.py:817
+#: src/fb_ddns/update_ddns.py:722 src/fb_ddns/update_ddns.py:819
 #, python-brace-format
 msgid "Response from {}:"
 msgstr "Response from {}:"
 
-#: src/fb_ddns/update_ddns.py:722 src/fb_ddns/update_ddns.py:819
+#: src/fb_ddns/update_ddns.py:724 src/fb_ddns/update_ddns.py:821
 #, python-brace-format
 msgid "Status code: {c}, status text: {r!r}."
 msgstr "Statuscode: {c}, Statustext: {r!r}."
 
-#: src/fb_ddns/update_ddns.py:758
+#: src/fb_ddns/update_ddns.py:760
 #, python-brace-format
 msgid "Update all domains at {} with found dynamic external addresses ..."
 msgstr "Aktualisierung aller Domänen mit den gefundenen externen Adressen …"
 
-#: src/fb_ddns/update_ddns.py:800
+#: src/fb_ddns/update_ddns.py:802
 msgid "Simulation mode, update of all domains will not be sended."
 msgstr "Simulationsmodus, die Aktualisierung aller Domänen wird nicht gesendet."
 
