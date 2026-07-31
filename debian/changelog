@@ -1,3 +1,10 @@
+fb-ddns (0.2.2) all; urgency=medium
+
+  * Splitting RPM specfile into two different binary packages.
+  * Improving logging configuration.
+
+ -- Frank Brehm <frank@brehm-online.com>  Fri, 31 Jul 2026 18:00:44 +0200
+
 fb-ddns (0.2.1) all; urgency=medium
 
   * Moving installation of script manpages into Debian package fb-ddns.
