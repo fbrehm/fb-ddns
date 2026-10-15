@@ -37,11 +37,7 @@ BuildArch:      noarch
 %description
 Python scripts and modules for managing DynDNS clients.
 
-This is the Python@@@py_version_nodot@@@ version.
-
-In this package are contained the following scripts:
- * myip
- * update-ddns
+This is the Python%{python3_pkgversion} version.
 
 %prep
 echo "Preparing '${builddir}-' ..."
@@ -56,19 +52,32 @@ echo "Pwd: $( pwd )"
 
 %install
 %pyproject_install
-%pyproject_save_files fb_ddns
 
-echo "Whats in '%{builddir}':"
-ls -lA '%{builddir}'
-
-echo "Whats in '%{buildroot}':"
-ls -lA '%{buildroot}'
-
-%files -f %{pyproject_files}
+%files
 %defattr(-,root,root,-)
 %license LICENSE
 %doc CHANGELOG.md LICENSE README.md pyproject.toml debian/changelog
+%{python3_sitelib}/*
+%{_datadir}/locale/*
+
+%package -n fb-ddns
+
+Summary:  Python scripts and modules for managing DynDNS clients.
+Group:    Applications/System
+
+Requires: python%{python3_pkgversion}-fb-ddns = %{version}
+
+%description -n fb-ddns
+Python scripts and modules for managing DynDNS clients.
+
+In this package are contained the following scripts:
+ * myip
+ * update-ddns
+
+This is the Python%{python3_pkgversion} version.
+
+%files -n fb-ddns
 %{_bindir}/*
-%{_datadir}/*
+%{_mandir}/*
 
 %changelog
